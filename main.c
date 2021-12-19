@@ -181,14 +181,13 @@ void anagram(char word[], char text[]) {
                 if (ptrIndexOf != NULL) {
                     int indToDel = ptrIndexOf - copyWord;
                     for (int k = indToDel + 1; k < (strlen(copyWord) + 1); k++) {
-                        copyWord[k-1] = copyWord[k];
+                        copyWord[k - 1] = copyWord[k];
                     }
                 }
                 if (strlen(copyWord) == 0) {
                     if (firstIter == 0) {
                         printf("%s", tempWord);
-                    }
-                    else {
+                    } else {
                         printf("~%s", tempWord);
                     }
                     firstIter++;
@@ -199,7 +198,7 @@ void anagram(char word[], char text[]) {
 }
 
 int main() {
-    char arr[TXT+WORD];
+    char arr[TXT + WORD];
     char word[WORD];
     char text[TXT];
 
@@ -224,11 +223,11 @@ int main() {
         count++;
         i++;
     }
-    printf("%d", count);
+    //printf("%d", count);
 
 
     compareASCII(word, text);
-    printf("Atbash Sequences :");
+    printf("Atbash Sequences:");
     textContainsAtbashSequence(word, text);
     anagram(word, text);
     return 0;
