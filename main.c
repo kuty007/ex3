@@ -216,18 +216,8 @@ int main() {
         j++;
     }
     text[j] = '\0';
-
-    i = 0;
-    int count = 0;
-    while (word[i] != '\0') {
-        count++;
-        i++;
-    }
-    //printf("%d", count);
-
-
     compareASCII(word, text);
-    printf("Atbash Sequences:");
+    printf("Atbash Sequences: ");
     textContainsAtbashSequence(word, text);
     anagram(word, text);
     return 0;
